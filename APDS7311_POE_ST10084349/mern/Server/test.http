@@ -1,0 +1,54 @@
+ GET http://localhost:5050/ HTTP/1.1
+###
+GET https://localhost:5050/ HTTP/1.1
+###
+GET http://localhost:5050/record HTTP/1.1
+###
+GET https://localhost:5050/record HTTP/1.1
+###
+POST https://localhost:5050/record HTTP/1.1
+
+###
+POST https://localhost:5050/user/signup HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "darius",
+    "password": "darius"  
+}
+
+###
+POST https://localhost:5050/user/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "darius",
+    "password": "darius"  
+}
+
+###
+DELETE  https://localhost:5050/record/6523fdc67c6bc21d1ce3ed76 HTTP/1.1
+content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhcml1cyIsInBhc3N3b3JkIjoiZGFyaXVzIiwiaWF0IjoxNjk2ODU3NTI1LCJleHAiOjE2OTY4NjExMjV9.PXG0Ebs2akh9_rSxphkIbzchijnNgMKCLA1jNWMZogA
+
+###
+POST https://localhost:5050/record/create HTTP/1.1
+content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhcml1cyIsInBhc3N3b3JkIjoiZGFyaXVzIiwiaWF0IjoxNjk2ODU3NTI1LCJleHAiOjE2OTY4NjExMjV9.PXG0Ebs2akh9_rSxphkIbzchijnNgMKCLA1jNWMZogA
+
+{
+    "name":"record"
+}
+
+###
+PATCH  https://localhost:5050/record/6523fdc67c6bc21d1ce3ed76 HTTP/1.1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhcml1cyIsInBhc3N3b3JkIjoiZGFyaXVzIiwiaWF0IjoxNjk2ODU3MTIxLCJleHAiOjE2OTY4NjA3MjF9.HP--jKxM8aiEBIBixWcOhNOMtpSdCRKU-X3kn9BBRZI
+content-Type: application/json
+
+{
+    "name":"test"
+}
+
+###
+GET https://localhost:5050/record HTTP/1.1
+content-Type: application/json
